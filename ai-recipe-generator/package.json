@@ -4,12 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
+    "dev": "cross-env NODE_OPTIONS=--max-old-space-size=8192 vite",
+    "build": "cross-env NODE_OPTIONS=--max-old-space-size=8192 tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@aws-amplify/ui-react": "^6.15.6",
     "aws-amplify": "^6.22.1",
     "react": "^19.2.8",
     "react-dom": "^19.2.8"
